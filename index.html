@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- --------- UNICONS ---------- -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- --------- FAVICON ---------- -->
+    <!-- ----- MAIN JS ----- -->
+    <script src="main.js"></script>
+    <!-- ----- MAIN JS ----- -->
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
+
+    <title>Portfolio | Joeson Clerve</title>
+</head>
+<body>
+   <div class="container">
+    <!-- --------------- HEADER --------------- -->
+    <nav id="header">
+        <div class="nav-logo">
+            <p class="nav-name">Portfolio</p>
+            <span>.</span>
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+            <ul class="nav_menu_list">
+                <li class="nav_list">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav_list">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav_list">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <!-- <li class="nav_list">
+                    <a href="#blogs" class="nav-link">Blogs</a>
+                </li> -->
+                <li class="nav_list">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <button onclick="window.location.href='https://drive.google.com/drive/folders/1KVLiyAFzJq7e9N0qdDp1fsSkbLNqCn6b?usp=sharing'">Download CV <i class="uil uil-file-alt"></i></button>
+        </div>
+    
+        <div class="nav-menu-btn">
+            <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+        </div>
+        
+      </nav>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    navLinks.forEach(l => l.classList.remove('active-link'));
+                    this.classList.add('active-link');
+                });
+            });
+
+            // Set the initial active link (e.g., Home)
+            document.querySelector('a[href="#home"]').classList.add('active-link');
+        });
+    </script>
+    <!-- -------------- MAIN ---------------- -->
+    <main class="wrapper">
+       <!-- -------------- FEATURED BOX ---------------- -->
+       <section class="featured-box" id="home">
+          <div class="featured-text">
+            <!-- <div class="featured-text-card">
+                <span>Joeson Clerve</span>
+            </div> -->
+            <div class="featured-name">
+                
+                <p>Hello! I'm <br><span class="typedText">Joeson Clerve</span></p>
+            </div>
+            <div class="featured-job">
+                <p class="animate-typing">Full Stack And Mobile App Developer</p>
+            </div>
+            <div class="featured-text-info">
+                <p>I am a passionate and results-driven developer, proficient in both front-end and back-end technologies. I thrive on crafting innovative, user-focused solutions and consistently deliver clean, maintainable code. My relentless commitment to excellence ensures that I not only meet but exceed expectations in every project I undertake.
+                </p>
+            </div>
+            <div class="featured-text-btn">
+                <button class="btn blue-btn" onclick="window.location.href='https://www.upwork.com/freelancers/~0156c3063cef0798ae?mp_source=share';">Hire Me</button>
+                <!-- <button class="btn">Download CV <i class="uil uil-file-alt"></i></button> -->
+            </div>
+         
+          </div>
+          <div class="featured-image">
+            <div class="image">
+                <img src="Assets/Joe.png" alt="avatar">
+            </div>
+          </div>
+          <!-- <div class="scroll-icon-box">
+            <a href="#about" class="scroll-btn">
+                <i class="uil uil-mouse-alt"></i>
+                <p>Scroll Down</p>
+            </a>
+          </div> -->
+
+       </section>
+       <!-- -------------- ABOUT BOX ---------------- -->
+       <section class="section" id="about">
+    <div class="top-header">
+        <h1>About Me</h1>
+    </div>
+    <div class="skills-container">
+        <!-- Frontend Skills -->
+        <div class="skills-box">
+            <div class="skills-header">
+                <h3>Frontend</h3>
+            </div>
+            <div class="skills-list">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Material UI</span>
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>Redux</span>
+                <span>Flutter</span>
+                
+            </div>
+        </div>
+        <!-- Backend Skills -->
+        <div class="skills-box">
+            <div class="skills-header">
+                <h3>Backend</h3>
+            </div>
+            <div class="skills-list">
+                <!-- <span>PHP</span> -->
+                <span>JAVA</span>
+                <!-- <span>Python</span> -->
+                <span>NodeJS</span>
+                <span>ExpressJS</span>
+                <!-- <span>Spring Boot</span> -->
+                <span>Firebase</span>
+            </div>
+        </div>
+        <!-- DBMS -->
+        <div class="skills-box">
+            <div class="skills-header">
+                <h3>Database</h3>
+            </div>
+            <div class="skills-list">
+                <span>MySQL</span>
+                <span>MSSQL</span>
+                <span>PostgreSQL</span>
+                <span>MongoDB</span>
+               
+            </div>
+
+        </div>
+        <div class="skills-box">
+            <div class="skills-header">
+                <h3>Cloud </h3>
+            </div>
+            <div class="skills-list">
+               <span>AWS</span>
+               <span> EC2</span>
+               <span>s3 Bucket</span>
+            </div>
+    </div>
+
+    <div class="skills-box">
+        <div class="skills-header">
+            <h3>Others</h3>
+        </div>
+        <div class="skills-list">
+          <span>Git</span>
+          <span>GitHub</span>
+          <span>Postman</span>
+          <span>Firebase</span>
+        </div>
+</div>
+</section>
+
+       <!-- -------------- PROJECT BOX ---------------- -->
+
+       <section class="section" id="projects">
+        <div class="top-header">
+            <h1>Projects</h1>
+        </div>
+        <div class="project-scroll-container">
+            <div class="project-container">
+                <div class="project-box">
+                    <div class="project-background" style="background-image: url('Assets/Romodo.png');"></div>
+                    <div class="project-content">
+                        <h3>Romodo - Web App</h3>
+                        <p>Romodo is a web application that allows users to book rooms in hotels. It was built using React, Redux, NodeJS, ExpressJS, and MongoDB.</p>
+                        <div class="project-technologies">
+                            <span>React</span>
+                            <span>TypeScript</span>
+                            <span>Material UI</span>
+                            <span>NodeJS</span>
+                            <span>ExpressJS</span>
+                            <span>MongoDB</span>
+                            <span>Firebase</span>
+                            <span>Google Cloud Platform</span>
+                        </div>
+                        <a href="https://github.com/orgs/Romodo-Copy/repositories" class="view-code-btn" target="_blank">View Code</a>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <div class="project-background" style="background-image: url('Assets/Portfolio.png');"></div>
+                    <div class="project-content">
+                        <h3>CraftedByJoe - Portfolio Web App</h3>
+                        <p>This portfolio website showcases my skills and expertise, built using HTML, JavaScript, CSS, and powered by AWS for robust cloud integration. </p>
+                        <div class="project-technologies">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>EmailJS</span>
+                            <span>AWS</span>
+                            <span>EC2</span>
+                            <span>S3 Bucket</span>
+                        </div>
+                        <a href="https://github.com/" class="view-code-btn" target="_blank">View Code</a>
+                    </div>
+                </div>
+
+                <div class="project-box">
+                    <div class="project-background" style="background-image: url('Assets/Portfolio.png');"></div>
+                    <div class="project-content">
+                        <h3>CraftedByJoe - Portfolio Web App</h3>
+                        <p>This portfolio website showcases my skills and expertise, built using HTML, JavaScript, CSS, and powered by AWS for robust cloud integration. </p>
+                        <div class="project-technologies">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>EmailJS</span>
+                            <span>AWS</span>
+                            <span>EC2</span>
+                            <span>S3 Bucket</span>
+                        </div>
+                        <a href="https://github.com/" class="view-code-btn" target="_blank">View Code</a>
+                    </div>
+                </div>
+                <!-- Add more .project-box elements here -->
+            </div>
+        </div>
+    </section>
+
+       <!-- -------------- CONTACT BOX ---------------- -->
+<section class="section" id="contact">
+    <div class="top-header">
+        <h1>Get in touch</h1>
+        <span>Please do not hesitate to contact me if you have any questions or if there are opportunities where my skills could be of value.</span>
+    </div>
+    <div class="form-wrapper">
+        <form id="contact-form" class="form-control">
+            <div class="form-inputs">
+                <input type="text" class="input-field" name="from_name" id="name" placeholder="Name" required>
+                <input type="email" class="input-field" name="from_email" id="email" placeholder="Email" required>
+            </div>
+            <div class="text-area">
+                <textarea name="message" id="message" placeholder="Message" required></textarea>
+            </div>
+            <div class="form-button">
+                <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<script type="text/javascript">
+    (function() {
+        emailjs.init("I2uf_hOpuYhaw-jSU");
+    })();
+    
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // These IDs from the previous steps
+        const serviceID = 'service_u7hqnhh';
+        const templateID = 'template_qgojzpa';
+        
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                alert('Message sent successfully!');
+                
+                // Clear the form after submission
+                this.reset();
+            }, (err) => {
+                alert('Failed to send the message. Please try again later.', err);
+            });
+    });
+</script>
+    </main>
+
+
+    <!-- --------------- FOOTER --------------- -->
+    <footer>
+        <div class="top-footer">
+            <p>Joeson Clerve</p>
+        </div>
+        <div class="middle-footer">
+            <ul class="footer-menu">
+                <li class="footer_menu_list">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#about">About</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#projects">Projects</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-social-icons">
+            <div class="social_icons">
+                <div class="icon"><a href="https://www.instagram.com/clerve_9?igsh=dGp6YXdoZDN0bzY3" target="_blank"><i class="uil uil-instagram"></i></a></div>
+                <div class="icon"><a href="https://www.linkedin.com/in/joeson-clerve/" target="_blank"><i class="uil uil-linkedin-alt"></i></a></div>
+                <div class="icon"><a href="https://github.com/JClerve" target="_blank"><i class="uil uil-github-alt"></i></a></div>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <p>Copyright &copy; <a href="#home" style="text-decoration: none; color: aquamarine;">Joeson Clerve</a> - All rights reserved</p>
+        </div>
+    </footer>
+
+    </div>
+
+
+
+
+    <!-- ----- TYPING JS Link ----- -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+       <!-- ----- SCROLL REVEAL JS Link----- -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+  
+    
+</body>
+</html>
+</html>
